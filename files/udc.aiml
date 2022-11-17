@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+            <random>
+            <li>Sorry, I'm cant answer this question.</li>
+            <li>That's good question!</li>
+            <li>I don't understand what you are talking about.</li>
+            <li>Error! Error! Error!</li>
+        </random>
+        </random>
+    
+    </template>
+  </category>
+  <category>
+      <pattern>HEY I AM *</pattern>
+      <template>
+          Hey, I'm your Introbot, Sam<split/><delay>2</delay>
+          what can I help you, <set name="username"> <star/></set> ?
+          <button>
+              <text>Can you tell me what LaMDA is?</text>
+              <postback>* WHAT LAMDA IS</postback>
+          </button>
+          <button>
+              <text>I want to learn some knowledge of badminton.</text>
+              <postback>羽球</postback>
+          </button>
+          <button>
+              <text>No,thanks.See you.</text>
+              <postback>BYE *</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>* WHAT LAMDA IS</pattern>
+      <template>
+          No problem!<br/>Let me think what I tell you first.<split/><delay>3</delay>
+          Mmmm...Let's talk about their objectives.<delay>2</delay>
+          
+          <button>
+              <text>I'm ready!</text>
+              <postback>WHAT IS LAMDA</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>WHAT IS LAMDA</pattern>
+      <template>
+          They ask for three objectives, Quality, Safety, Groundedness<split/><delay>4</delay>
+          That means current language models often produce narratives that seem plausible but actually conflict with the facts.<split/><delay>3</delay>
+          OK, so LaMDA how to achieve these objectives.<split/><delay>4</delay>
+          LaMDA unlike most other language models, it was trained on dialogue.<split/><delay>4</delay>
+          During its training, it picked up on several of the nuances from other forms of language. One of those nuances is sensibleness.<split/><delay>4</delay>
+          Other language models commonly known as chatbots,including me.<split/><delay>4</delay>
+          But LaMDA — short for “Language Model for Dialogue Applications” ,can mostly communicate with humans.<split/><delay>4</delay>
+          Even, this ability can make more natural interacting and entirely new categories of helpful applications.
+      </template>
+  </category>
+  <category>
+      <pattern>* EXAMPLE OF LAMDA </pattern>
+        <template>
+            Yes,I have some example of LaMDA<split/><delay>5</delay>
+            <link>
+                <text>Example 1</text>
+                <url>https://drive.google.com/file/d/1-sUxPIIbl7Bqt8w1SmkKpj6S9GbxuSV2/view?usp=share_link</url>
+            </link>
+            LaMDA can give you dessert recipes it have learned before.<br/>
+            <link>
+                <text>Example 2</text>
+                <url>https://drive.google.com/file/d/114ftQIS4f-JxK0C3Ll_-U97_xH4S1LAQ/view?usp=share_link</url>
+            </link>
+            LaMDA can act as Mount Everest while providing some educational, cited and recent information about “itself”.<br/>
+            <link>
+                <text>Example 3</text>
+                <url>https://drive.google.com/file/d/1S6Qd6UydahOOvSPEyQsgeE1s46yO22Xk/view?usp=share_link</url>
+            </link>
+            LaMDA explains the fundamentals of programming and then weaves it into an improvised joke.<br/>
+            <link>
+                <text>Example 4</text>
+                <url>https://drive.google.com/file/d/1y8NZKqzLDvyqkdunw4m2WbfJ6dURtSB1/view?usp=share_link</url>
+            </link>
+            LaMDA has some common sense knowledge.<br/>
+            <link>
+                <text>Example 5</text>
+                <url>https://drive.google.com/file/d/140NbkIfw5YScTINLlyqAXs6f-KoI8y5U/view?usp=share_link</url>
+            </link>
+            LaMDA can tell story to you.
+            <link>
+                <text>Example 6</text>
+                <url>https://drive.google.com/file/d/1wUbhIs6gdM7YsNPX0IXkagVQd2-JE2_e/view?usp=share_link</url>
+            </link>
+            But LaMDA may still be logic errors.<br/>
+        </template>
+  </category>
+  <category>
+      <pattern>BYE *</pattern>
+      <template>
+          GoodBye <get name="username"/>!<br/>
+          It was very pleasant to chat with you!
+      </template>
+  </category>
+  <category>
+      <pattern>羽球</pattern>
+      <template>
+          <button>
+              <text>怎麼打長球</text>
+              <postback>* 打長球</postback>
+          </button>
+          <button>
+              <text>怎麼切球</text>
+              <postback>* 切球</postback>
+          </button>
+          <button>
+              <text>怎麼殺球</text>
+              <postback>* 殺球</postback>
+          </button>
+          <button>
+              <text>怎麼放小球</text>
+              <postback>* 放小球</postback>
+          </button>
+          <button>
+              <text>怎麼勾對角</text>
+              <postback>* 勾對角</postback>
+          </button>
+          <button>
+              <text>怎麼挑球</text>
+              <postback>* 挑球</postback>
+          </button>
+          <button>
+              <text>返回功能清單</text>
+              <postback>HEY I AM *</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>* 打長球</pattern>
+      <template>
+          <delay>3</delay>
+          1.球點要在頭頂上方1點鐘方向（最高點打球）<br/>
+          2.腳先蹬地發力後，將腰部轉向前，再帶出肩膀和手肘，最後帶出手腕，完成帶動轉腰的力量，再藉由食指和大拇指固定球拍後擊球<br/>
+          3.拍面正面擊球
+          <button>
+              <text>返回選單</text>
+              <postback>羽球</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>* 切球</pattern>
+      <template>
+          <delay>3</delay>
+          1.拍面稍微向右傾斜<br/>
+          2.球點要在身體前上方（60°打球）<br/>
+          3.打到球時，手腕放鬆放軟向前推<br/>
+          <button>
+              <text>返回選單</text>
+              <postback>羽球</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>* 殺球</pattern>
+      <template>
+          <delay>3</delay>
+          1.拍面正面擊球<br/>
+          2.球點要在身體前上方打球（45度打球）<br/>
+          3.打到球時，小臂發力使手腕加速<br/>
+          <button>
+              <text>返回選單</text>
+              <postback>羽球</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>* 放小球</pattern>
+      <template>
+          <delay>3</delay>
+          1.拍頭向球柱延伸，手拿在網子的白帶附近，手腕比拍頭高<br/>
+          2.手放著不動，靠身體向前推<br/>
+          3.手指頭放鬆扶住球拍<br/>
+          <button>
+              <text>返回選單</text>
+              <postback>羽球</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>* 勾對角</pattern>
+      <template>
+          <delay>3</delay>
+          1.立拍後手向胸前延伸<br/>
+          2.手向前抬舉在胸前，腳的弓箭步要踩好<br/>
+          3.手指頭放鬆扶住球拍<br/>
+          4.用手臂帶動擊球<br/>
+          <button>
+              <text>返回選單</text>
+              <postback>羽球</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>* 挑球</pattern>
+      <template>
+          <delay>3</delay>
+          -正手挑球<br/>
+          1.引拍手掌向下，拍頭向下<br/>
+          2.擊球由下往上，拍頭向下<br/>
+          3.擊球瞬間拍面稍微往前翻<br/>
+          -反拍挑球<br/>
+          1.手肘提高（拍頭才能向下擺）<br/>
+          2.大拇指與食指平高<br/>
+          3.擊球由下往上，拍頭向下<br/>
+          <button>
+              <text>返回選單</text>
+              <postback>羽球</postback>
+          </button>
+      </template>
+  </category>
+</aiml>
